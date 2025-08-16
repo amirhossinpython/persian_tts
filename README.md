@@ -33,11 +33,22 @@
 
 ```python
 ## برای مشاهده لیست کامل در کد:
-print("شخصیت‌ها:", list_voices())
-## نمونه کد ساده
-from persian_tts import PersianTTS, list_voices
+from py_persian_tts import PersianTTS, list_voices
+import asyncio
 
-tts = PersianTTS(default_voice="man1")
+async def main():
+    tts = PersianTTS(default_voice="man1")
+    
+    # نمایش شخصیت‌ها
+    print("شخصیت‌ها:", list_voices())
+    
+    # تبدیل متن به صدا (نسخه async)
+    await tts.speak_async("سلام این یک تست است.", voice="man2", filename="tewst.wav")
+    print("عملیات با موفقیت انجام شد")
+
+# اجرای تابع async
+if __name__ == "__main__":
+    asyncio.run(main())
 
 # نمایش شخصیت‌ها
 print("شخصیت‌ها:", list_voices())
