@@ -29,7 +29,7 @@
 | man8       | ⚡️ آریا   |
 | boy1       | 🌟 آرش    |
 
-
+---
 
 ```python
 ## برای مشاهده لیست کامل در کد:
@@ -46,6 +46,6 @@ print("شخصیت‌ها:", list_voices())
 file_path = tts.speak("سلام این یک تست است .", voice="woman2", filename="test.wav")
 print("فایل صوتی ذخیره شد:", file_path)
 ```
-
+---
 ```bash
 pip install persian_tts
